@@ -1,0 +1,80 @@
+
+@import '../../../../main-style.scss';
+.card-img{
+width:100%;
+height:500px;
+object-fit: cover;
+opacity: 0.5;
+}
+
+.card-img-overlay{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.card-img-overlay .card-title
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: 180px;
+}
+.card-img-overlay .card-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    font-size: medium;
+
+    &:hover{
+        font-weight: bold;
+    }
+}
+.cat-bg .btn-dark{
+padding:14px 30px;
+position: absolute;
+top: 120px;
+left: 110px;
+text-transform: uppercase;
+transition: all 0.3s ease 0s;
+
+
+
+}
+
+.cat-bg{
+    position: relative;
+    background-color: linen;
+    width: 400px;
+    height: 300px;
+    top:100px;
+    left:80px;
+    opacity: 0.66;
+
+}
+
+.fruit{
+    background-image: url('../../../../assets/images/fruit.jpeg');
+    height:500px;
+}
+
+.flower{
+    background-image: url('../../../../assets/images/flower.jpeg');
+    height: 500px;
+}
+.card img{
+    border: none;
+    &:hover{
+        box-shadow: 5px 5px 5px linen;
+    }
+}
+.card{
+    border:none;
+    margin:20px auto;
+}
+
+
+
+
+
