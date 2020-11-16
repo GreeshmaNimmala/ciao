@@ -42,7 +42,7 @@ cartTotal=0;
     let productExist=false;
 
     for(let i in this.cartItems){
-      if(this.cartItems[i].productId === product.id){
+      if(this.cartItems[i].productId === product._id){
         this.cartItems[i].qty++
         productExist=true;
         break;
@@ -56,7 +56,7 @@ cartTotal=0;
           productName:product.name,
           qty:1,
           price:product.price,
-          productId:product.id
+          productId:product._id
         }
       );
 
