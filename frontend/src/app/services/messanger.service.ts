@@ -6,9 +6,20 @@ import { Subject } from 'rxjs';
 })
 export class MessangerService {
 
+
+
   subject=new Subject();
 
   constructor() { }
+
+  // private cart = new BehaviorSubject<Array<Product>>([]);
+  //   public cart$ = this.cart.asObservable();
+
+  //   public addItemToCart(product: Product): void {
+  //       let cartArr = [...this.cart];
+  //       cartArr.push(product)
+  //       this.cart.next(cartArr)
+  //   }
 
   sendMessage(product){
     this.subject.next(product);

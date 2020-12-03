@@ -5,6 +5,7 @@ const mongoose=require('../api/db/mongoose');
 const cors=require('cors');
 
 const Product=require('../api/model/product');
+const Cart = require('./model/cart');
 
 
 app.use(bodyParser.json());
@@ -57,6 +58,33 @@ app.delete('/soaps/:id',(req,res)=>{
         res.send(removedItem)
     })
 });
+
+app.get('/cart',(req,res)=>{
+    Cart.find({}).then((cartItem)=>{
+        res.send(cartItem);
+    })
+})
+
+app.post('/cart/:id',async(req,res)=>{
+    const _product = await Product.findById({_id:req.params.id})
+    console.log(_product);
+    let newCart=new Cart({
+        product:_product,
+        qty:req.body.qty
+    });
+
+    newCart.save().then((items)=>{
+        res.send(items);
+    })
+});
+
+// app.get('/cart/:productId',(req,res)=>{
+//     Cart.find({
+//         _productId:req.params.productId
+//     }).then((items)=>{
+//         res.send(items);
+//     })
+// });
 
 app.listen(3000,()=>{
     console.log("Server is listening on Port 3000")

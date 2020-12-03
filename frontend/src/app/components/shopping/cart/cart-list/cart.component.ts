@@ -58,6 +58,7 @@ cartTotal=0;
           price:product.price,
           productId:product._id
         }
+
       );
 
     }

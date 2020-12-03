@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/model/product';
+import { MessangerService } from 'src/app/services/messanger.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  count=0;
 
-  ngOnInit(): void {
-  }
+  constructor(private messangerService:MessangerService) { }
+
+  ngOnInit(){
+
+
+}
+
 
 }

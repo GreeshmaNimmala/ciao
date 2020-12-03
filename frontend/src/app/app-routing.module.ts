@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/shared/home/home.component';
+import { CartPageComponent } from './components/shopping/cart/cart-page.component';
 import { ShoppingComponent } from './components/shopping/shopping.component';
+
 
 
 const routes: Routes = [
@@ -13,6 +15,9 @@ const routes: Routes = [
   },
   {
     path:'shop',component:ShoppingComponent
+  },
+  {
+    path:'cart',component:CartPageComponent
   }
 ];
 
